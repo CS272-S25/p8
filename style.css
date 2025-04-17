@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(243, 226, 189); /* Light tan */
+    background-color: rgb(246, 236, 215); 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
@@ -20,15 +20,15 @@ body {
   }
   
   .btn-primary {
-    background-color: #c9a96d;
+    background-color: #a48b5b;
     border: none;
   }
   
   .btn-primary:hover {
-    background-color: #b8935a;
+    background-color: #8b724d;
   }
   
   .text-tan {
-    color: #b8935a;
+    color: #856c45;
   }
   
