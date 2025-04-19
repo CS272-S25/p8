@@ -1,2 +1,2 @@
 # Trendora
-Trendora is a modern e-commerce website showcasing sustainable and eco-friendly clothing and accessories for young adults. It features dynamic product listings, user rating, a shopping cart with localStorage, and a responsive design built with Bootstrap and a custom stylesheet.
+Trendora is an modern e-commerce website dedeicated to offering stylish, sustainable, and eco-conscious products for young adults. It emphasizes fashion-forward choices that align with a mindful, environmentally-friendly lifestyle.
