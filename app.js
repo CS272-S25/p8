@@ -16,7 +16,7 @@ fetch('data/products.json')
           <img src="${p.image}" width="100">
           <p>${p.name} - $${p.price}</p>
           <button onclick="addToCart(${p.id}, '${p.name}', ${p.price})">Add</button>
-          <a href="product.html?id=${p.id}"View</a>
+          <a href="product.html?id=${p.id}">View</a>
         </div>
     `).join('');
   }
