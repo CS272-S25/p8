@@ -23,6 +23,11 @@ function addToCart(id, name, price) {
   item ? item.quantity++ : cart.push({ id, name, price, quantity: 1 });
   localStorage.setItem("cart", JSON.stringify(cart));
   document.getElementById('cart-count').textContent = cart.reduce((t, i) => t + i.quantity, 0);
+
+  const alert = document.getElementById('cart-alert');
+  alert.classlist.remove('d-none');
+
+  setTimeout(() => alert.classList.add('d-none'), 2000);
 }
 
 document.addEventListener('DOMContentLoaded' () => {
