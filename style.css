@@ -31,4 +31,9 @@ body {
   .text-tan {
     color: #856c45;
   }
-  
+  .card-img-top {
+    height: 300px;           
+    object-fit: cover;       
+    border-radius: 0.5rem;   
+    width: 100%;             
+  }
