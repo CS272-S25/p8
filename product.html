@@ -25,6 +25,8 @@
         <li class="nav-item"><a class="nav-link text-tan" href="accessories.html">Accessories</a></li>
         <li class="nav-item"><a class="nav-link text-tan" href="eco-friendly.html">Eco-Friendly</a></li>
         <li class="nav-item"><a class="nav-link text-tan" href="about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text-tan" href="cart.html">Cart</a></li>
+        
       </ul>
     </div>
   </div>
@@ -41,6 +43,7 @@
       <h4 id="product-price" class="text-muted mb-3">$0.00</h4>
       <p id="product-desc" class="mb-4">Loading description...</p>
       <button class="btn btn-primary" id="add-to-cart">Add to Cart</button>
+      
       <div id="cart-alert" class="alert alert-success mt-3 d-none">Added to cart!</div>
     </div>
   </div>
@@ -68,6 +71,18 @@
       addToCart(productData.id, productData.name, productData.price);
     }
   });
+  function addToCart(id) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const index = cart.findIndex(item => item.id === id);
+  if (index >= 0) {
+    cart[index].qty += 1;
+  } else {
+    cart.push({ id: id, qty: 1 });
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert("Item added to cart!");
+}
+
 </script>
 </body>
 </html>
