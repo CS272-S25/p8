@@ -41,6 +41,7 @@
   </div>
 
   <script>
+    // find the product details from the product id
     function loadCart() {
       const cartItems= JSON.parse(localStorage.getItem('cart')) || [];
       if (cartItems.length=== 0) {
@@ -60,7 +61,7 @@
 
             const subtotal=product.price*item.qty;
             total += subtotal;
-
+//html content for each of the items in the cart
             html += `
               <div class="card mb-3 p-3">
                 <div class="row align-items-center">
@@ -81,12 +82,12 @@
               </div>
             `;
           });
-
+//update the cost and the html content
           document.getElementById("cart-items").innerHTML = html;
           document.getElementById("cart-total").textContent = "Total: $" + total.toFixed(2);
         });
     }
-
+// Update quantity of a cart item 
     function updateQty(id,change) {
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
       const index = cart.findIndex(item => item.id === id);
@@ -97,13 +98,14 @@
         loadCart();
       }
     }
-
+  // Removing items from carts
     function removeItem(id) {
       let cart =JSON.parse(localStorage.getItem('cart')) || [];
       cart = cart.filter(item => item.id !== id);
       localStorage.setItem('cart', JSON.stringify(cart));
       loadCart();
     }
+    //clear the cart
     function clearCart() {
       localStorage.removeItem('cart');
       loadCart();
